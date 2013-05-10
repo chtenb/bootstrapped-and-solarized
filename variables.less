@@ -55,21 +55,23 @@
 
 // Solarized Light Theme
 //-----------------------
-@background: @base3;
-@backgroundHighlights: @base2;
-@comments: @base1;
-@bodytext: @base00; 
-@emphasis: @base01;
-@backgroundInverse: @base03;
-@backgroundInverseHighlights: @base02;
+//@background: @base3;
+//@backgroundHighlights: @base2;
+//@comments: @base1;
+//@bodytext: @base0; 
+//@emphasis: @base01;
+//@backgroundInverse: @base03;
+//@backgroundInverseHighlights: @base02;
 
 // Solarized Dark Theme
 //-----------------------
-//@background: @base03;
-//@backgroundHighlights: @base02;
-//@comments: @base01;
-//@bodytext: @base0; 
-//@emphasis: @base1;
+@background: @base03;
+@backgroundHighlights: @base02;
+@comments: @base01;
+@bodytext: @base00; 
+@emphasis: @base1;
+@backgroundInverse: @base3;
+@backgroundInverseHighlights: @base2;
 
 
 // Scaffolding
@@ -155,15 +157,15 @@
 @inputBackground:               @background;
 @inputBorder:                   @backgroundHighlights;
 @inputBorderRadius:             3px;
-@inputDisabledBackground:       @backgroundHighlights; //@grayLighter;
-@formActionsBackground:         #f5f5f5;
+@inputDisabledBackground:       @backgroundHighlights;
+@formActionsBackground:         @background;
 @inputHeight:                   @baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
 // Dropdowns
 // -------------------------
 @dropdownBackground:            @background;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownDividerTop:            @backgroundHighlights; //#e5e5e5;
+@dropdownDividerTop:            @backgroundHighlights;
 @dropdownDividerBottom:         @background;
 
 @dropdownLinkColor:             @backgroundHighlights;
@@ -213,7 +215,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  #f5f5f5;
+@wellBackground:                  @backgroundHighlights;
 
 
 
@@ -223,47 +225,46 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       @background;
 @navbarBackground:                @backgroundHighlights;
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBackgroundHighlight:       @background;
+@navbarBorder:                    darken(@navbarBackground, 5%);
 
-@navbarText:                      @bodytext; //@grayLight;
-@navbarLinkColor:                 @bodytext; // @grayLight;
-@navbarLinkColorHover:            darken(@bodytext, 15%); 
+@navbarText:                      @bodytext;
+@navbarLinkColor:                 @bodytext;
+@navbarLinkColorHover:            darken(@bodytext, 8%); 
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@backgroundHighlights, 15%);
+@navbarLinkBackgroundActive:      darken(@backgroundHighlights, 5%);
 
 @navbarSearchBackground:          darken(@background, 1%); 
-@navbarSearchBackgroundFocus:     @background; //@white;
+@navbarSearchBackgroundFocus:     @background;
 @navbarSearchBorder:              @comments; 
 @navbarSearchPlaceholderColor:    transparent;
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                @background;
+@navbarInverseBackgroundHighlight:       @backgroundHighlights;
+@navbarInverseBorder:                    darken(@navbarInverseBackground, 12%);
 
 @navbarInverseText:                      @grayLight;
 @navbarInverseLinkColor:                 @grayLight;
-@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorHover:            @background;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
 @navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
-@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBackgroundFocus:     @background;
 @navbarInverseSearchBorder:              @navbarInverseBackground;
-@navbarInverseSearchPlaceholderColor:    #ccc;
-
+@navbarInverseSearchPlaceholderColor:    transparent;
 @navbarInverseBrandColor:                @navbarInverseLinkColor;
 
 
 // -------------------------
-@paginationBackground:                #fff;
-@paginationBorder:                    #ddd;
-@paginationActiveBackground:          #f5f5f5;
+@paginationBackground:                @background;
+@paginationBorder:                    @background;
+@paginationActiveBackground:          @backgroundHighlights;
 
 
 // Hero unit
